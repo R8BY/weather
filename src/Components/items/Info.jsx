@@ -15,7 +15,7 @@ const Info = (props) => {
                 </div>
                 <Temperature status="Clearly" lowtemp = "20" hightemp="42" currentTemperature="32"/>
                 <button className={classes.confirm}>Enter</button>
-                {/*<Switch/>*/}
+                <Switch/>
             </div>
         </section>
 

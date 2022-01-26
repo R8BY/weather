@@ -2,9 +2,9 @@ import classes from "./Switch.module.css"
 
 const Switch = () => {
     return (
-        <div>
-            <input id="s1" type="checkbox" className={classes.input}/>
-                <label htmlFor="s1">Mode</label>
+        <div className={classes.checkbox_container}>
+            <input id="cb1" type="checkbox"/>
+            <label For="cb1 ">Mode</label>
         </div>
     );
 };
