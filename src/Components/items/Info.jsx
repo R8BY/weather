@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Info.module.css'
-import ava from "../../img/1.png"
 import Header from "../Header/Header"
 import Switch from "../Switch/Switch";
 import Temperature from "./TempInfo/Temperature";
@@ -18,7 +17,6 @@ const Info = (props) => {
                 <Switch/>
             </div>
         </section>
-
     );
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from "../Info.module.css";
 import ava from "../../../img/1.png";
 import classes from "./Temperature.module.css"
 
@@ -8,7 +7,7 @@ const Temperature = (props) => {
         <div>
             <div className={classes.item}>
                 <div>
-                    <img src={ava} className={classes.weather_icon}/>
+                    <img src={ava} className={classes.weather_icon} alt={"weather_icon"}/>
                 </div>
                 <span className={classes.temperature}>{props.currentTemperature}℃</span>
             </div>

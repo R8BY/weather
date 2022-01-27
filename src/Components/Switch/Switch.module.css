@@ -10,7 +10,7 @@
 
 .checkbox_container input[type="checkbox"] {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0;
     position: absolute;
 
 }
