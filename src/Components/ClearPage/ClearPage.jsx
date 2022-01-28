@@ -12,8 +12,6 @@ const ClearPage = (props) => {
                 <img src={ClearImg} alt="default-img"/>
             </div>
             <span>Enter a ZipCode</span>
-            <MyButton link={"/weather"}/>
-            <Switch/>
         </div>
     );
 };

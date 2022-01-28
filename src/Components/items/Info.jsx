@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './Info.module.css'
-import Header from "../Header/Header"
 import Switch from "../Switch/Switch";
 import Temperature from "./TempInfo/Temperature";
 import MyButton from "../MyButton/MyButton";
+import Header from "../Header/Header"
 import Forecast from "../Forecast/Forecast"
+import {fetchWeather} from "../../api/fetchWeather";
+// import { Header } from "../Header";
+
 
 const Info = (props) => {
     return (
