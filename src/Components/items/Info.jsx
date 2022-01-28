@@ -3,6 +3,8 @@ import classes from './Info.module.css'
 import Header from "../Header/Header"
 import Switch from "../Switch/Switch";
 import Temperature from "./TempInfo/Temperature";
+import MyButton from "../MyButton/MyButton";
+import Forecast from "../Forecast/Forecast"
 
 const Info = (props) => {
     return (
@@ -13,7 +15,9 @@ const Info = (props) => {
                     <span className={classes.uppercase}>{props.City},{props.Country}</span>
                 </div>
                 <Temperature status="Clearly" lowtemp = "20" hightemp="42" currentTemperature="32"/>
-                <button className={classes.confirm}>Enter</button>
+                {/*<Forecast/>*/}
+                {/*<button className={classes.confirm}>Enter</button>*/}
+                <MyButton/>
                 <Switch/>
             </div>
         </section>
