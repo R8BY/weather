@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import ReactWeather from 'react-open-weather';
 import '../../App.css';
-import {fetchWeather, forecast} from "../../api/fetchWeather"
+import {fetchWeather} from "../../api/fetchWeather"
 
 const Forecast = () => {
 
@@ -9,7 +8,7 @@ const Forecast = () => {
     const [weather, setWeather] = useState(null);
 
     const search = async (e) => {
-        if (e.key == 'Enter') {
+        if (e.key === 'Enter') {
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');
@@ -17,8 +16,7 @@ const Forecast = () => {
         }
     }
     return (
-        <div className={"container"}>
-            <div className={"items"}>
+            <div>
                 <h1>Weather info</h1>
                 <input
                     type="text"
@@ -30,7 +28,6 @@ const Forecast = () => {
 
                 {weather ? <span>{weather.main.temp}</span> : null}
             </div>
-        </div>
     );
 };
 

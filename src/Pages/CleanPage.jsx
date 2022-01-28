@@ -10,13 +10,11 @@ const CleanPage = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState(null);
     return (
-        <div className={"container"}>
-            <div className={"items"}>
-                <Header setQuery={setQuery} setWeather={setWeather} query={query}/>
-                <ClearPage />
-                <MyButton link={"/weather"}/>
-                <Switch/>
-            </div>
+        <div className="items">
+            <Header setQuery={setQuery} setWeather={setWeather} query={query} weather={weather}/>
+            <ClearPage/>
+            <MyButton link={"/weather"}/>
+            <Switch/>
         </div>
     );
 };

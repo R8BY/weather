@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
 import classes from "./MyButton.module.css";
+import { Link } from 'react-router-dom';
 
-const MyButton = (props) => {
+const MyButton = () => {
 
     return (
         <div>
-            <button className={classes.confirm}><a href={props.link}>Enter</a></button>
+            <button className={classes.confirm}><Link to="/weather">Enter</Link></button>
         </div>
     );
 };

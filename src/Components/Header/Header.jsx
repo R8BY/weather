@@ -1,11 +1,13 @@
 import classes from './Header.module.css'
-import React, {useState} from "react";
+// import React from "react";
 import {fetchWeather} from "../../api/fetchWeather";
+import "../../App.css"
 
-const Header = ({setWeather, setQuery, query, props}) => {
+const Header = ({setWeather, setQuery, query}) => {
 
     const search = async (e) => {
-        if (e.key == 'Enter') {
+        console.clear();
+        if (e.key === 'Enter') {
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');
@@ -13,7 +15,6 @@ const Header = ({setWeather, setQuery, query, props}) => {
         }
     }
     return (
-
         <header className={classes.header}>
             <input
                 type="text"
@@ -22,7 +23,7 @@ const Header = ({setWeather, setQuery, query, props}) => {
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search..."
                 onKeyPress={search}
-                />
+            />
         </header>
     );
 }
