@@ -13,7 +13,7 @@ const Forecast = () => {
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');
-            console.log(weather.main.temp)
+            console.log(weather)
         }
     }
     return (

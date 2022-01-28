@@ -4,22 +4,22 @@ import Switch from "../Switch/Switch";
 import Temperature from "./TempInfo/Temperature";
 import MyButton from "../MyButton/MyButton";
 import Header from "../Header/Header"
-import Forecast from "../Forecast/Forecast"
-import {fetchWeather} from "../../api/fetchWeather";
-// import { Header } from "../Header";
-
+import {fetchWeather, forecast} from "../../api/fetchWeather";
 
 const Info = (props) => {
+    const [query, setQuery] = useState('');
+    const [weather, setWeather] = useState(null);
+
+    console.log(weather);
+
     return (
         <section className={"container"}>
             <div className={classes.items}>
-                <Header/>
+                <Header setQuery={setQuery} setWeather={setWeather} query={query}/>
                 <div className={classes.preview}>
-                    <span className={classes.uppercase}>{props.City},{props.Country}</span>
+                    {weather ? <span className={classes.uppercase}>{weather.name},{weather.sys.country}</span>: null}
                 </div>
-                <Temperature status="Clearly" lowtemp = "20" hightemp="42" currentTemperature="32"/>
-                {/*<Forecast/>*/}
-                {/*<button className={classes.confirm}>Enter</button>*/}
+                {weather ? <Temperature status={weather.weather[0].description} lowtemp={Math.round(weather.main.temp_min)} hightemp={Math.round(weather.main.temp_max)} currentTemperature={Math.round(weather.main.temp)}/> : null}
                 <MyButton/>
                 <Switch/>
             </div>

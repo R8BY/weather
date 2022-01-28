@@ -25,7 +25,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-input[type=number] {
+input[type=text] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -36,14 +36,12 @@ input[type=number] {
     border-radius: 20px;
 }
 
-input[type=number]{
+input[type=text]{
     outline-width: 0;
 }
 
 .container {
     border-radius: 50px;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
     top: calc(50% - 473px);
     left: 0;
     right: 0;
@@ -58,8 +56,6 @@ input[type=number]{
 }
 
 .container:hover {
-    /*-moz-box-shadow: 0 0 3px #ff0000;*/
-    /*-webkit-box-shadow: 0 0 3px #ff0000;*/
     box-shadow: 0 0 7px #005aff;
     transition: all 1s;
 }

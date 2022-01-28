@@ -4,15 +4,17 @@ import ClearPage from "../Components/ClearPage/ClearPage"
 import '../App.css'
 import MyButton from "../Components/MyButton/MyButton";
 import Switch from "../Components/Switch/Switch";
-import {fetchWeather} from "../api/fetchWeather";
+
 
 const CleanPage = () => {
+    const [query, setQuery] = useState('');
+    const [weather, setWeather] = useState(null);
     return (
         <div className={"container"}>
             <div className={"items"}>
-                <Header />
+                <Header setQuery={setQuery} setWeather={setWeather} query={query}/>
                 <ClearPage />
-                <MyButton link={"/weather"} />
+                <MyButton link={"/weather"}/>
                 <Switch/>
             </div>
         </div>

@@ -9,13 +9,13 @@ import {
     Route
 } from "react-router-dom";
 
-function App() {
+function App(props) {
 
     return (
         <div className={"container"}>
             <Routes>
-                <Route path="/" element={<CleanPage/>}/>
-                <Route path="/weather" element={<Info Country={"Belarus"} City={"Gomel"}/>}/>
+                <Route path="/" element={<CleanPage />}/>
+                <Route path="/weather" element={<Info city={props.city} />}/>
                 <Route path="/forecast" element={<Forecast />}/>
             </Routes>
         </div>

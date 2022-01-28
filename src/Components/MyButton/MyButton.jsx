@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
 import classes from "./MyButton.module.css";
-import Forecast from "../Forecast/Forecast"
-import axios from "axios";
 
 const MyButton = (props) => {
 
