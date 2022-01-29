@@ -7,11 +7,13 @@ import Switch from "../Components/Switch/Switch";
 
 
 const CleanPage = () => {
-    const [query, setQuery] = useState('');
-    const [weather, setWeather] = useState(null);
+
+    // const [query, setQuery] = useState('');
+    // const [weather, setWeather] = useState(null);
+
     return (
         <div className="items">
-            <Header setQuery={setQuery} setWeather={setWeather} query={query} weather={weather}/>
+            {/*<Header setQuery={setQuery} setWeather={setWeather} query={query} weather={weather}/>*/}
             <ClearPage/>
             <MyButton link={"/weather"}/>
             <Switch/>
