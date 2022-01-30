@@ -4,11 +4,11 @@ import '../App.css'
 import MyButton from "../Components/MyButton/MyButton";
 import Switch from "../Components/Switch/Switch";
 
-const CleanPage = () => {
+const CleanPage = ({search,msg}) => {
     return (
         <div className="items">
             <ClearPage/>
-            <MyButton link={"/weather"}/>
+            <MyButton link={"/weather"} search={search} msg={msg}/>
             <Switch/>
         </div>
     );
