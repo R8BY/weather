@@ -9,6 +9,7 @@ const Forecast = () => {
 
     const search = async (e) => {
         if (e.key === 'Enter') {
+            console.clear();
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');
@@ -26,7 +27,7 @@ const Forecast = () => {
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyPress={search}/>
 
-                {weather ? <span>{weather.main.temp}</span> : null}
+                {/*{weather ? <span>{weather.main.temp}</span> : null}*/}
             </div>
     );
 };
