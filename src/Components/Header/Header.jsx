@@ -1,10 +1,10 @@
+import React, {useState} from 'react';
 import classes from './Header.module.css'
-// import React from "react";
 import {fetchWeather} from "../../api/fetchWeather";
 import "../../App.css"
 import { Outlet } from "react-router-dom";
 
-const Header = ({setWeather, setQuery, query, we}) => {
+const Header = ({setWeather, setQuery, query, weather}) => {
 
     const search = async (e) => {
         console.clear();
@@ -12,7 +12,7 @@ const Header = ({setWeather, setQuery, query, we}) => {
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');
-            console.log(data);
+            console.log(weather);
         }
     }
     return (
@@ -29,6 +29,7 @@ const Header = ({setWeather, setQuery, query, we}) => {
             <Outlet/>
         </header>
     );
+
 }
 
 export default Header;

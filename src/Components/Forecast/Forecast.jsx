@@ -9,6 +9,7 @@ const Forecast = () => {
 
     const search = async (e) => {
         if (e.key === 'Enter') {
+            console.clear();
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');

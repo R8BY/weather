@@ -9,10 +9,10 @@ import {
     Route,
 } from "react-router-dom";
 
-
-function App(props) {
+function App() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState(null);
+
     return (
         <div className={"container"}>
             <div className={"items"}>
@@ -20,7 +20,7 @@ function App(props) {
                     <Route path={"/"} element={<Header setQuery={setQuery} setWeather={setWeather} query={query}
                                                        weather={weather}/>}>
                         <Route index element={<CleanPage/>}/>
-                        <Route path="weather" element={<Info/>}/>
+                        <Route path="weather" element={<Info weather={weather}/>}/>
                         <Route path="forecast" element={<Forecast/>}/>
                     </Route>
                 </Routes>
