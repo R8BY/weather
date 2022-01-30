@@ -4,9 +4,8 @@ import Switch from "../Switch/Switch";
 import Temperature from "./TempInfo/Temperature";
 import MyButton from "../MyButton/MyButton";
 
-const Info = ({weather}) => {
+const Info = ({weather, search}) => {
 
-    console.log(weather);
 
     return (
         <div>
@@ -19,7 +18,7 @@ const Info = ({weather}) => {
                              currentTemperature={Math.round(weather.main.temp)}
                              icon={weather.weather[0].icon}/>
                 : null}
-            <MyButton weather={weather}/>
+            <MyButton search={search} />
             <Switch/>
 
         </div>
