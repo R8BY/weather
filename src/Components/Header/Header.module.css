@@ -1,0 +1,8 @@
+.header{
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
