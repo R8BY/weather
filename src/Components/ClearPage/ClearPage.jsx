@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../App.css';
 import classes from "./ClearPage.module.css"
-import ClearImg from "../../img/clearpage.png"
+import ClearImg from "../../img/clearpageimg.png"
 
 const ClearPage = () => {
     return (
