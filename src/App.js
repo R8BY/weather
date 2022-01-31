@@ -12,13 +12,20 @@ import {fetchWeather} from "./api/fetchWeather";
 function App() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState(null);
-
+    const helpornot = false;
     const search = async () => {
+        try {
+            console.clear();
             const data = await fetchWeather(query);
             setWeather(data);
             setQuery('');
-    }
-
+        }
+        catch (err){
+            console.clear();
+            const MyError = new Error('Please select other country!');
+            console.log(MyError.message);
+            }
+        }
     return (
         <div className={"container"}>
             <div className={"items"}>

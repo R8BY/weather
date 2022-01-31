@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 
 const MyButton = ({search}) => {
     const handleClick = () => {
-        console.log('handle click')
         search()
     }
     return (
