@@ -19,7 +19,7 @@ const Info = ({weather, search, modalActive, setModalActive}) => {
                 : null}
             <MyButton search={search} modalActive={modalActive} setModalActive={setModalActive}/>
             <ModalError modalActive={modalActive} setModalActive={setModalActive}
-                        children={"Please select other country!"}/>
+                        children={"Please change your country or check your internet connection!"}/>
             <Switch/>
 
         </div>

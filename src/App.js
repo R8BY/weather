@@ -13,11 +13,21 @@ function App() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState(null);
     const [modalActive, setModalActive] = useState(false);
-    const search = async () => {
-        const data = await fetchWeather(query);
-        setWeather(data);
-        setQuery('');
+
+    const search = () => {
+        const successRequest = (r) => {
+            setWeather(r);
+            setQuery('');
+            console.log(r)
+        }
+        const modalOpen = () => {
+            setModalActive(true)
+            console.clear();
+            console.log('Bad request, change country or check your internet connection!');
+        }
+        fetchWeather(query).then(r => successRequest(r)).catch(modalOpen);
     }
+
     return (
         <div className={"container"}>
             <div className={"items"}>

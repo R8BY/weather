@@ -1,15 +1,9 @@
 import classes from "./MyButton.module.css";
 import {Link} from 'react-router-dom';
 
-const MyButton = ({search, modalActive, setModalActive}) => {
+const MyButton = ({search}) => {
     const handleClick = () => {
-        try {
-            console.clear();
-            search();
-        } catch (error) {
-            const MyError = new Error('Please select other country!');
-            console.log(MyError.message);
-        }
+        search()
     }
     return (
         <div>
@@ -18,6 +12,5 @@ const MyButton = ({search, modalActive, setModalActive}) => {
         </div>
     );
 };
-//{() => setModalActive(true)}
 
 export {MyButton};
