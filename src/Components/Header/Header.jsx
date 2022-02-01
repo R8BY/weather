@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import classes from './Header.module.css'
-import {fetchWeather} from "../../api/fetchWeather";
 import "../../App.css"
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 
 const Header = ({setQuery}) => {
 
@@ -22,4 +21,4 @@ const Header = ({setQuery}) => {
 
 }
 
-export default Header;
+export {Header};

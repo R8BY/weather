@@ -19,4 +19,4 @@ const Temperature = (props) => {
     );
 };
 
-export default Temperature;
+export {Temperature};

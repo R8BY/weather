@@ -14,4 +14,4 @@ const ClearPage = () => {
     );
 };
 
-export default ClearPage;
+export {ClearPage};

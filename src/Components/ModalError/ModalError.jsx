@@ -11,4 +11,4 @@ const ModalError = ({modalActive, setModalActive, children}) => {
     );
 };
 
-export default ModalError;
+export { ModalError };

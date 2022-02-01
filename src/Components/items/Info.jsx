@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Info.module.css'
-import Switch from "../Switch/Switch";
-import Temperature from "./TempInfo/Temperature";
-import MyButton from "../MyButton/MyButton";
-import ModalError from "../ModalError/ModalError";
+import {Switch} from "../Switch/";
+import {Temperature} from "./TempInfo/";
+import {MyButton} from "../MyButton/";
+import {ModalError} from "../ModalError/";
 
 const Info = ({weather, search, modalActive, setModalActive}) => {
     return (
@@ -18,11 +18,12 @@ const Info = ({weather, search, modalActive, setModalActive}) => {
                              icon={weather.weather[0].icon}/>
                 : null}
             <MyButton search={search} modalActive={modalActive} setModalActive={setModalActive}/>
-            <ModalError modalActive={modalActive} setModalActive={setModalActive} children={"Please select other country!"}/>
+            <ModalError modalActive={modalActive} setModalActive={setModalActive}
+                        children={"Please select other country!"}/>
             <Switch/>
 
         </div>
     );
 };
 
-export default Info;
+export {Info};
