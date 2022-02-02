@@ -15,6 +15,8 @@ const Info = ({weather, search, modalActive, setModalActive}) => {
                 <Temperature status={weather.weather[0].description} lowtemp={Math.round(weather.main.temp_min)}
                              hightemp={Math.round(weather.main.temp_max)}
                              currentTemperature={Math.round(weather.main.temp)}
+                             wind={weather.wind.speed}
+                             feels={weather.main.feels_like}
                              icon={weather.weather[0].icon}/>
                 : null}
             <MyButton search={search} modalActive={modalActive} setModalActive={setModalActive}/>

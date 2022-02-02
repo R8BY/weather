@@ -1,16 +1,18 @@
-.temperature{
+.temperature {
     font-size: 90px;
 }
 
-.weather_icon{
-    width: 50%;
+
+.weather_icon {
+    width: 150px;
+    height: 150px;
 }
 
-.weather_info{
+.weather_info {
     padding-bottom: 20px;
 }
 
-.weather_info p{
-    padding:0;
-    margin:0;
+.weather_info p {
+    padding: 0;
+    margin: 0;
 }

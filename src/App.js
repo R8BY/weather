@@ -18,7 +18,7 @@ function App() {
         const successRequest = (r) => {
             setWeather(r);
             setQuery('');
-            console.log(r)
+            console.log(r);
         }
         const modalOpen = () => {
             setModalActive(true)
