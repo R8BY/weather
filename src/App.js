@@ -35,8 +35,9 @@ function App() {
                     <Route path={"/"} element={<Header setQuery={setQuery}/>}>
                         <Route index element={<CleanPage search={search} modalActive={modalActive}
                                                          setModalActive={setModalActive}/>}/>
-                        <Route path="weather" element={<Info weather={weather} search={search} modalActive={modalActive}
-                                                             setModalActive={setModalActive}/>}/>
+                        <Route path="weather"
+                               element={<Info weather={weather} search={search} modalActive={modalActive}
+                                              setModalActive={setModalActive}/>}/>
                     </Route>
                 </Routes>
             </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Info.module.css'
-import {Switch} from "../Switch/";
 import {Temperature} from "./TempInfo/";
 import {MyButton} from "../MyButton/";
 import {ModalError} from "../ModalError/";
@@ -22,8 +21,6 @@ const Info = ({weather, search, modalActive, setModalActive}) => {
             <MyButton search={search} modalActive={modalActive} setModalActive={setModalActive}/>
             <ModalError modalActive={modalActive} setModalActive={setModalActive}
                         children={"Please change your country or check your internet connection!"}/>
-            <Switch/>
-
         </div>
     );
 };
